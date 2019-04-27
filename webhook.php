@@ -17,7 +17,7 @@ $client = new DiscordClient(['token' => DISCORD_TOKEN]);
 
 $message = ":bell: **" . $response->getWebhookEventData()->getCheckName() . ":** " . 
            $response->getWebhookEventData()->getCheckStateName() . " (" .
-           $response->getWebhookEventData()->getRequestStartTime()->format('Y-m-d H:m:i') . ")";
+           (new DateTime())->format('Y-m-d H:m:i') . ")";
 
 $client->channel->createMessage([
     'channel.id' => DISCORD_CHANNEL,
