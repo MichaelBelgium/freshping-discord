@@ -1,0 +1,15 @@
+{
+    "name": "michaelbelgium/freshping-discord",
+    "description": "A simple webhook to send a discord message when freshping sends an alert.",
+    "type": "project",
+    "require": {
+        "restcord/restcord": "^0.3.1"
+    },
+    "authors": [
+        {
+            "name": "Michael V.",
+            "email": "michael@michaelbelgium.me"
+        }
+    ],
+    "license": "MIT"
+}
