@@ -1,6 +1,6 @@
 # Freshping to discord
 
-This is a webhook that can be used for [Freshping](freshping.io). When Freshping fires an alert, you can specify a discord channel which receives the alert.
+This is a webhook that can be used for [Freshping](https://freshping.io/). When Freshping fires an alert, you can specify a discord channel which receives the alert.
 
 ## Installation
 
