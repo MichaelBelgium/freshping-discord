@@ -11,5 +11,8 @@
             "email": "michael@michaelbelgium.me"
         }
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+        "classmap": ["src/"]
+    }
 }
