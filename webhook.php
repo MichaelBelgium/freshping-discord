@@ -20,7 +20,7 @@ $checkAt->setTimezone(new DateTimeZone(date_default_timezone_get()));
 
 $message = ":bell: **" . $response->getWebhookEventData()->getCheckName() . ":** " . 
            $response->getWebhookEventData()->getCheckStateName() . " (" .
-           $checkAt->format('Y-m-d H:m:i') . ") - Response time: {$response->getWebhookEventData()->getResponseTime()} ms";
+           $checkAt->format('Y-m-d H:i:s') . ") - Response time: {$response->getWebhookEventData()->getResponseTime()} ms";
 
 $client->channel->createMessage([
     'channel.id' => DISCORD_CHANNEL,
