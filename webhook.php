@@ -15,9 +15,12 @@ if (empty($json_data) || empty(DISCORD_CHANNEL) || empty(DISCORD_TOKEN))
 $response = new FreshpingResponse($json_data);
 $client = new DiscordClient(['token' => DISCORD_TOKEN]);
 
+$checkAt = $response->getWebhookEventData()->getRequestStartTime();
+$checkAt->setTimezone(new DateTimeZone(date_default_timezone_get()));
+
 $message = ":bell: **" . $response->getWebhookEventData()->getCheckName() . ":** " . 
            $response->getWebhookEventData()->getCheckStateName() . " (" .
-           (new DateTime())->format('Y-m-d H:m:i') . ") - Response time: {$response->getWebhookEventData()->getResponseTime()} ms";
+           $checkAt->format('Y-m-d H:m:i') . ") - Response time: {$response->getWebhookEventData()->getResponseTime()} ms";
 
 $client->channel->createMessage([
     'channel.id' => DISCORD_CHANNEL,
